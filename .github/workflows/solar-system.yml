@@ -71,6 +71,8 @@ jobs:
             retention-days: 7
     docker:
       needs: [unit-testing, code-coverage]
+      permissions:
+        packages: write
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Repository

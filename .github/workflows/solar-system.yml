@@ -70,9 +70,9 @@ jobs:
             path: coverage
             retention-days: 7
     docker:
-      needs: [unit-testing, code-coverage]
       permissions:
         packages: write
+      needs: [unit-testing, code-coverage]
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Repository
